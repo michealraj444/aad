@@ -1,0 +1,247 @@
+activitymain.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#A4C639" />
+
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:text="User Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#0099FF" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView2"
+        android:layout_toEndOf="@id/textView2"
+        android:background="#CCCCCC"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <!-- Password -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:text="Password"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#0099FF" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView3"
+        android:layout_toEndOf="@id/textView3"
+        android:background="#CCCCCC"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <!-- Gender -->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:text="Gender"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#0099FF" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView5"
+        android:layout_toEndOf="@id/textView5"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+    </RadioGroup>
+
+    <!-- Date of Birth -->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:text="Date of Birth"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#0099FF" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView6"
+        android:layout_toEndOf="@id/textView6"
+        android:ems="10"
+        android:inputType="date" />
+
+    <!-- Age -->
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:text="Age"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#0099FF" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView7"
+        android:layout_toEndOf="@id/textView7"
+        android:background="#CCCCCC"
+        android:ems="10"
+        android:inputType="number" />
+
+    <!-- State -->
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView7"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:text="State"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#0099FF" />
+
+    <Spinner
+        android:id="@+id/spinnerState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView8"
+        android:layout_toEndOf="@id/textView8" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerState"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#0099FF"
+        android:text="Submit"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
+
+
+mainactiviy.java
+
+package com.example.a4th;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private EditText editTextName, editTextPassword, editTextDate, editTextAge;
+    private RadioGroup radioGroupGender;
+    private Spinner spinnerState;
+    private Button buttonSubmit;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Initialize views
+        editTextName = findViewById(R.id.editText1);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        editTextDate = findViewById(R.id.editTextDate);
+        editTextAge = findViewById(R.id.editTextAge);
+        radioGroupGender = findViewById(R.id.radioGroup);
+        spinnerState = findViewById(R.id.spinnerState);
+        buttonSubmit = findViewById(R.id.buttonSubmit);
+
+        // Set button click listener
+        buttonSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handleSubmit();
+            }
+        });
+    }
+
+    private void handleSubmit() {
+        String name = editTextName.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
+        String dob = editTextDate.getText().toString().trim();
+        String age = editTextAge.getText().toString().trim();
+        int selectedGenderId = radioGroupGender.getCheckedRadioButtonId();
+        String gender = "";
+
+        if (selectedGenderId != -1) {
+            RadioButton selectedRadioButton = findViewById(selectedGenderId);
+            gender = selectedRadioButton.getText().toString();
+        }
+
+        String state = spinnerState.getSelectedItem().toString();
+
+        // Validate inputs
+        if (name.isEmpty() || password.isEmpty() || dob.isEmpty() || age.isEmpty() || gender.isEmpty()) {
+            Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Display collected information
+        String message = "Name: " + name + "\n" +
+                "Password: " + password + "\n" +
+                "DOB: " + dob + "\n" +
+                "Age: " + age + "\n" +
+                "Gender: " + gender + "\n" +
+                "State: " + state;
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
